@@ -23,7 +23,7 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
   - provider: lambda
     function_name: "skill-my-barista"
-    region: "eu-west-3"
+    region: "eu-west-1"
     role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
     runtime: "nodejs8.10"
     handler_name: "handler"
