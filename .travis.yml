@@ -13,11 +13,27 @@ script:
 after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
 
 deploy:
-  provider: lambda
-  function_name: "skill-my-barista"
-  region: "us-east-1"
-  role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
-  runtime: "nodejs8.10"
-  handler_name: "handler"
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  - provider: lambda
+    function_name: "skill-my-barista"
+    region: "us-east-1"
+    role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
+    runtime: "nodejs8.10"
+    handler_name: "handler"
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+  - provider: lambda
+    function_name: "skill-my-barista"
+    region: "eu-west-3"
+    role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
+    runtime: "nodejs8.10"
+    handler_name: "handler"
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+  - provider: lambda
+    function_name: "skill-my-barista"
+    region: "ap-northeast-1"
+    role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
+    runtime: "nodejs8.10"
+    handler_name: "handler"
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
