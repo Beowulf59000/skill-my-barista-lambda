@@ -1,0 +1,1 @@
+{"version":3,"file":"HelpIntentHandler.js","sourceRoot":"","sources":["../../../src/IntentHandlers/HelpIntentHandler.ts"],"names":[],"mappings":";;AAAA,4CAA6D;AAC7D,mEAAwE;AAExE,uBAAuC,SAAQ,0CAAiB;IAC5D;QACI,KAAK,CAAC,oCAAW,EAAE,yBAAa,EAAE,0BAAc,CAAC,CAAC;IACtD,CAAC;CACJ;AAJD,oCAIC;AAAA,CAAC"}

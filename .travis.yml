@@ -1,0 +1,23 @@
+language : node_js
+
+node_js :
+  - stable
+
+install:
+  - npm install
+
+script:
+  - npm run coverage
+
+# Send coverage data to Coveralls
+after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+
+deploy:
+  provider: lambda
+  function_name: "skill-my-barista"
+  region: "us-east-1"
+  role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
+  runtime: "nodejs8.10"
+  handler_name: "handler"
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
