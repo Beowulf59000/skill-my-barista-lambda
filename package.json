@@ -2,7 +2,7 @@
   "name": "skill-my-barista",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Index.ts",
   "scripts": {
     "build": "tsc",
     "test": "nyc mocha",
