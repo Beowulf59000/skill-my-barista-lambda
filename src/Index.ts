@@ -18,8 +18,7 @@ import {
 import { RequestEnvelope, ResponseEnvelope } from "ask-sdk-model";
 import { LambdaHandler } from 'ask-sdk-core/dist/skill/factory/BaseSkillFactory';
  
-function buildLambdaSkill(): LambdaHandler {
-  return SkillBuilders.standard()
+export const handler = SkillBuilders.custom()
     .addRequestHandlers(
       new LaunchRequestHandler(),
       new HelpIntentHandler(),
@@ -29,13 +28,9 @@ function buildLambdaSkill(): LambdaHandler {
       new RecipeSuggestionIntentHandler(),
       new RecipeIntentHandler(),
       new NumberOfRecipesIntentHandler()
-    )
-    .addErrorHandlers(new ErrorHandler())
-    .lambda();
-}
- 
-// Lambda handler - entry point for skill
-export let handler = buildLambdaSkill();
+)
+.addErrorHandlers(new ErrorHandler())
+.lambda();
 
 // export async function handler(
 //   event: RequestEnvelope,
