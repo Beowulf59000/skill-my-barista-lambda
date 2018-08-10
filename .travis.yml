@@ -18,6 +18,7 @@ deploy:
     region: "us-east-1"
     role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
     runtime: "nodejs8.10"
+    module_name: "dist/src/index"
     handler_name: "handler"
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -26,6 +27,7 @@ deploy:
     region: "eu-west-1"
     role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
     runtime: "nodejs8.10"
+    module_name: "dist/src/index"
     handler_name: "handler"
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -34,6 +36,7 @@ deploy:
     region: "ap-northeast-1"
     role: "arn:aws:iam::352194809061:role/lilasoft-lambda"
     runtime: "nodejs8.10"
+    module_name: "dist/src/index"
     handler_name: "handler"
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY

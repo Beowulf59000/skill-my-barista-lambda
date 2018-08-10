@@ -18,7 +18,7 @@ import {
 import { RequestEnvelope, ResponseEnvelope } from "ask-sdk-model";
 import { LambdaHandler } from 'ask-sdk-core/dist/skill/factory/BaseSkillFactory';
  
-export const handler = SkillBuilders.custom()
+const handler: LambdaHandler = SkillBuilders.custom()
     .addRequestHandlers(
       new LaunchRequestHandler(),
       new HelpIntentHandler(),
@@ -31,6 +31,8 @@ export const handler = SkillBuilders.custom()
 )
 .addErrorHandlers(new ErrorHandler())
 .lambda();
+
+export { handler };
 
 // export async function handler(
 //   event: RequestEnvelope,
